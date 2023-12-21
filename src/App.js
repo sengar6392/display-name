@@ -31,7 +31,7 @@ function App() {
           onChange={(e) => setLastName(e.target.value)}
         />
         <br />
-        <button onClick={handleSubmit}>Submit</button>
+        <button type="submit" onClick={handleSubmit}>Submit</button>
       </form>
       {fullName && <div>Full Name: {fullName}</div>}
     </div>
