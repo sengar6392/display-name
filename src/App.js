@@ -6,6 +6,7 @@ function App() {
   const [lastName, setLastName] = useState(null);
   const [fullName, setFullName] = useState(null);
   function handleSubmit(e) {
+    e.preventDefault();
     if (firstName && lastName) setFullName(`${firstName} ${lastName}`);
   }
   return (
@@ -32,7 +33,7 @@ function App() {
         <br />
         <button onClick={handleSubmit}>Submit</button>
       </form>
-      <div>Full Name: {fullName}</div>
+      {fullName && <div>Full Name: {fullName}</div>}
     </div>
   );
 }
